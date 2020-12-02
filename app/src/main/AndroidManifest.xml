@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sensus.diginidea.pencatatankebun">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_tunas128"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_tunas"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>qc
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--@string/app_name-->
+        <activity
+            android:name=".edit.edit_identitas"
+            android:label="IDENTITAS"/>
+        <activity
+            android:name=".listData.list_data"
+            android:label="LIST DATA"/>
+        <activity
+            android:name=".listData.list_data_luas_real"
+            android:label="LIST DATA"/>
+        <activity
+            android:name=".edit.luas_areal"
+            android:label="LUAS AREAL TANAMAN"/>
+        <activity
+            android:name=".real_menu_list"
+            android:label="REALISASI PRODUKSI"/>
+        <activity
+            android:name=".edit.real_produk_perbulan"
+            android:label="REALISASI PRODUKSI"/>
+        <activity
+            android:name=".view_data_estimasi"
+            android:label="INPUT PRODUKSI-ESTIMASI"/>
+        <activity
+            android:name=".submenu"
+            android:label="PENCATATAN KEBUN"/>
+        <activity
+            android:name=".prod_menu_list"
+            android:label="PRODUKSI"/>
+        <activity
+            android:name=".edit.produksi"
+            android:label="PRODUKSI"/>
+        <activity
+            android:name=".estimasi"
+            android:label="ESTIMASI"/>
+        <activity
+            android:name=".edit.est_produksi"
+            android:label="ESTIMASI PRODUKSI"/>
+        <activity
+            android:name=".edit.est_luas_areal"
+            android:label="ESTIMASI LUAS AREAL"/>
+        <activity
+            android:name=".view_data"
+            android:label="DAFTAR"/>
+        <activity
+            android:name=".backup"
+            android:label="BACKUP DATABASE"/>
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP"/>
+
+</manifest>

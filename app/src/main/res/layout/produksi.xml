@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hijau"
+    android:orientation="vertical"
+    tools:context="com.sensus.diginidea.pencatatankebun.edit.produksi">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/hijau3"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID SENSUS : "
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_sensus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="7dp"
+                android:text="id_sensus"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JENIS KOMODITAS : "
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/txKomoditas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="7dp"
+                android:text="jenis"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.80"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="25dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TANGGAL PENDATAAN : "
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/txDates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:hint="DD"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:maxLength="2"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/txMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:hint="MM"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:maxLength="2"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/txYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:hint="YYYY"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:maxLength="4"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="1. "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:text="WUJUD PRODUKSI : "
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+
+                <Spinner
+                    android:id="@+id/txWjdProduksi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_column="3"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dropdown" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/trSatuan"
+                android:layout_width="fill_parent"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:text="SATUAN :"
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+
+                <Spinner
+                    android:id="@+id/txSatuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_column="3"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@color/white" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="2. "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:text="JUMLAH PRODUKSI : "
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3">
+
+                    <TextView
+                        android:id="@+id/txJmlProd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:id="@+id/txsatJmlProd"
+                        android:layout_width="20pt"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:text="KG"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/trKonversi"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:text="KONVERSI : "
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3">
+
+                    <TextView
+                        android:id="@+id/txKonversi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="4"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txSatuanKonversi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:text="KG"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+                </LinearLayout>
+            </TableRow>
+
+            <TextView
+                android:id="@+id/lbproduksiHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PRODUKSI : "
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="3. "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dijual :"
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/txDijual"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:lines="1"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txsatDIJUAL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:text=" Kg"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="4. "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Disimpan :"
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/txDisimpan"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:lines="1"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txsatDISIMPAN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:text=" Kg"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="5. "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:text="Konsumsi :"
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/txKonsumsi"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:lines="1"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txsatKONSUMSI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:text=" Kg"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+                </LinearLayout>
+            </TableRow>
+
+            <TextView
+                android:id="@+id/headKET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_marginTop="15dp"
+                android:text="KETERANGAN : "
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+
+
+            <EditText
+                android:id="@+id/txKeterangan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:textColor="@color/white" />
+
+
+        </TableLayout>
+    </ScrollView>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/navigationitem" />
+
+</LinearLayout>

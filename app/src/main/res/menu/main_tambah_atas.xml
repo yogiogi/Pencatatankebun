@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/edit"
+        android:orderInCategory="100"
+        android:title="Edit identitas"/>
+    <item
+        android:id="@+id/luas_area"
+        android:orderInCategory="100"
+        android:title="TAMBAH DATA LUAS AREA"/>
+    <item
+        android:id="@+id/realisasi"
+        android:orderInCategory="100"
+        android:title="TAMBAH DATA REALISASI PRODUKSI JAN S/D AGUST '17"/>
+    <item
+        android:id="@+id/produksi"
+        android:orderInCategory="100"
+        android:title="TAMBAH DATA PRODUKSI"/>
+    <item
+        android:id="@+id/es_produksi"
+        android:orderInCategory="100"
+        android:title="TAMBAH DATA PERKIRAAN LUAS AREAL DAN PPRODUKSI DES '17"/>
+</menu>

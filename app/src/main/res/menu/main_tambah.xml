@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/simpan"
+        android:orderInCategory="100"
+        android:title="SIMPAN DATA"/>
+    <item
+        android:id="@+id/list"
+        android:orderInCategory="100"
+        android:title="LIST DATA"/>
+    <item
+        android:id="@+id/cancel"
+        android:orderInCategory="100"
+        android:title="BATAL"/>
+</menu>

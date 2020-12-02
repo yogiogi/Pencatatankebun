@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hijau"
+    android:orientation="vertical"
+    tools:context=".listData.list_data">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/hijau3"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PEKEBUN : "
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lbNamaPetani"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="7dp"
+            android:text="nama_pekebun"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/hijau3"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="JUMLAH KOMODITAS = "
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txJml_luas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="7dp"
+            android:text="jumlah"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/hijau3"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/txStatusKirim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="7dp"
+            android:text=""
+            android:textColor="@color/merah"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+    <com.sensus.diginidea.pencatatankebun.slidingItems.SlidingTabLayout
+        android:id="@+id/tab"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/tab"/>
+</LinearLayout>

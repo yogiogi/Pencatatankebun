@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffffff</color>
+    <color name="biru">#b6fcd5</color>
+    <color name="black">#ff000000</color>
+    <color name="input_login">#222222</color>
+    <color name="input_login_hint">#999999</color>
+    <color name="hijau2">#26ae90</color>
+    <color name="hijau3">#39cc9d</color>
+    <color name="hijauTua">#0d997a</color>
+    <color name="btn_login_bg">#eceef1</color>
+    <color name="bg_login">#c9e8e3</color>
+    <color name="merah">#FF0000</color>
+    <color name="hijau">#3ddba9</color>
+
+
+</resources>

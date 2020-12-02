@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hijau"
+    android:orientation="vertical"
+    tools:context="com.sensus.diginidea.pencatatankebun.edit.est_luas_areal">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/hijau3"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID SENSUS : "
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_sensus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="7dp"
+                android:text="id_sensus"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JUMLAH KOMODITAS TERSIMPAN: "
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txJml_luas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="7dp"
+                android:text="jumlah"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.80"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:paddingBottom="5dp"
+                android:text="JENIS TANAMAN : "
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/txJenisTanaman"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_column="2"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="KOMODITAS : "
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/txKomoditas"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_column="2"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/headTegakan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="JUMLAH TEGAKAN"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txSatuanJumlahTegakan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:paddingLeft="10dp"
+                    android:text=" POHON/RUMPUN"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/headInti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_marginTop="5dp"
+                android:text="INTI : "
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TableRow
+                android:id="@+id/tbmPekebun"
+                android:layout_width="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="center_vertical"
+                    android:text="1. "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvTBM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:text="TBM : "
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/txTBM"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:inputType="numberDecimal"
+                    android:lines="1"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+
+            </TableRow>
+
+            <TableRow android:id="@+id/tmPekebun">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="center_vertical"
+                    android:text="2. "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvTM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:text="TM : "
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/txTM"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:inputType="numberDecimal"
+                    android:lines="1"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+
+            </TableRow>
+
+            <TableRow android:id="@+id/ttmPekebun">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="3. "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvTTM"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:text="TTM/TR : "
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/txTTM"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:lines="1"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+            </TableRow>
+
+            <TableRow android:id="@+id/JumlahInti">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="center_vertical"
+                    android:text="4. "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="JUMLAH : "
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/txJumlahTegakan"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+
+            </TableRow>
+
+            <TextView
+                android:id="@+id/headPlasma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_marginTop="25dp"
+                android:text="PLASMA"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TableRow android:id="@+id/tbmPlasma">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="center_vertical"
+                    android:text="5. "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:text="TBM : "
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/txTBMplasma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:lines="1"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tmPlasma"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="6. "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TM : "
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/txTMplasma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:lines="1"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+            </TableRow>
+
+            <TableRow android:id="@+id/ttmPlasma">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="7. "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TTM/TR : "
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/txTTMplasma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:lines="1"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </TableRow>
+
+            <TableRow android:id="@+id/JumlahPlasma">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="center_vertical"
+                    android:text="8. "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="JUMLAH : "
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/txJumlahPlasma"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+            </TableRow>
+
+            <TextView
+                android:id="@+id/headKET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_marginTop="15dp"
+                android:text="KETERANGAN : "
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+
+
+            <EditText
+                android:id="@+id/txKeterangan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:textColor="@color/white" />
+
+        </TableLayout>
+    </ScrollView>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/navigationitem" />
+</LinearLayout>

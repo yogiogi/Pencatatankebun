@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hijau"
+    android:orientation="vertical"
+    tools:context="com.sensus.diginidea.pencatatankebun.edit.edit_identitas">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/hijau3"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/tvNotif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="25dp"
+            android:text="ID SUDAH ADA!"
+            android:textColor="#FF0000"
+            android:textSize="14dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID SENSUS : "
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/id_sensus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="7dp"
+            android:text="id_sensus"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topLayout"
+        android:layout_weight="1.80"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="25dp">
+
+            <TextView
+                android:id="@+id/tvHeadSatu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:paddingBottom="5dp"
+                android:text="I. KETERANGAN PEKEBUN"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="1. "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/lbNama"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="NAMA PEKEBUN : "
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout android:layout_column="2">
+
+                    <EditText
+                        android:id="@+id/txNamaPekebun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:capitalize="characters"
+                        android:ems="10"
+                        android:hint="Sesuai dengan KTP"
+                        android:inputType="textCapCharacters"
+                        android:lines="1"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="13dp" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/a2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="2. "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/lbTelpPekebun"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="NO TELEPON : "
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/txTelp"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="phone"
+                    android:lines="1"
+                    android:maxLength="13"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="13dp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/trkeltani1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/a3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="3. "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="KELOMPOK TANI : "
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/trkeltani2"
+                android:layout_width="match_parent">
+
+                <EditText
+                    android:id="@+id/txKelompokTani"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_weight="1"
+                    android:capitalize="sentences"
+                    android:ems="10"
+                    android:inputType="textPersonName|textCapWords"
+                    android:lines="1"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="13dp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/a4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="4. "
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PROPINSI : "
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="[62]"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:text="KALIMANTAN TENGAH "
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/a5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="5. "
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="KABUPATEN : "
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:id="@+id/kode_kabupaten"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="[01]"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:paddingBottom="5dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginBottom="5dp">
+
+                    <Spinner
+                        android:id="@+id/txKabupaten"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:spinnerMode="dialog" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/a6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="6. "
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="KECAMATAN : "
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:id="@+id/kode_kecamatan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="[kode_kecamatan]"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginBottom="5dp">
+
+                    <Spinner
+                        android:id="@+id/txkec"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:spinnerMode="dialog" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/a7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="7. "
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DESA : "
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:id="@+id/kode_desa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="[kode_desa]"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2">
+
+                    <Spinner
+                        android:id="@+id/txDesa"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:spinnerMode="dialog" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/a8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="8. "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:text="NO URUT : "
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/txNourut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:maxLength="4"
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+
+            </TableRow>
+
+            <TextView
+                android:id="@+id/ketPetugas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_marginTop="15px"
+                android:text="II. KETERANGAN PETUGAS"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/manbun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="MANBUN "
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+            <TableRow android:id="@+id/manbunrow1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="1. "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/lbNamaManbun"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_weight="1"
+                    android:text="NAMA MANBUN : "
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/manbunrow11">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2">
+
+                    <Spinner
+                        android:id="@+id/txNamaManbun"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:spinnerMode="dialog" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow android:id="@+id/manbunrow2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="2."
+                    android:textColor="@color/white"
+                    />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="2">
+
+                    <TextView
+                        android:id="@+id/lbHPmanbun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NO TELEPON : "
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+
+                    <EditText
+                        android:id="@+id/txnoHPmanbun"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="phone"
+                        android:lines="1"
+                        android:maxLength="13"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="13dp" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow android:id="@+id/manbunrow3">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="3. "
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lbTglCatatManbun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TANGGAL PENCATATAN :"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:id="@+id/txTglCatatManbun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tanggal Pencatatan"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/navigationitem" />
+
+</LinearLayout>
